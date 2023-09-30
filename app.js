@@ -11,5 +11,5 @@ if (gender == "male"){
 let hotCold = window.prompt("do you want it hot or cold", "");
 let drink = window.prompt("what is your drink", "");
 let prepared = window.alert("Your Drink is being Prepared");
-(hotCold != "" && drink != "") ? console.log("your drink is gitting prepared") : console.log("try again please");
-console.log('${theName} - ${drink}');
+
+console.log("Name : " +  theName +'\n'  +"Drink : " + drink);
