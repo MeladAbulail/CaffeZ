@@ -14,6 +14,7 @@ A[0] = theName;
 gender = window.prompt("Enter Your Gender", "").toUpperCase();
 
 
+function LGender() {
     while (true) {
         if (gender !== male && gender !== female) {
             gender = window.prompt("Enter Your Gender", "").toUpperCase();
@@ -23,7 +24,9 @@ gender = window.prompt("Enter Your Gender", "").toUpperCase();
             
         }
     }
+}
 
+LGender();
 
 if (gender == "MALE"){
     window.alert("Welcome Mr " + theName);
@@ -35,10 +38,10 @@ if (gender == "MALE"){
 
 
 
-let hotCold = window.prompt("Hot or Cold ?", "");
+let hotCold = window.prompt("do you want it hot or cold", "");
 A[2] = hotCold;
 
-let drink = window.prompt("What Would You Like to Drink ?", "");
+let drink = window.prompt("what is your drink", "");
 A[3] = drink;
 
 
