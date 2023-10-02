@@ -42,7 +42,7 @@ let drink = window.prompt("What Would You Like to Drink ?", "");
 A[3] = drink;
 
 
-let prepared = window.alert("Your Drink is being Prepared !");
+let prepared = window.alert("Your Drink is being Prepared ");
 
 console.log("Name : " +  theName +'\n'  +"Drink : " + drink);
 
