@@ -24,6 +24,7 @@ function LGender() {
             
         }
     }
+    A[1] = gender;
 }
 
 LGender();
@@ -38,8 +39,8 @@ if (gender == "MALE"){
 
 
 
-let hotCold = window.prompt("do you want it hot or cold", "");
-A[2] = hotCold;
+let age1 = window.prompt("How old are you?", "");
+A[2] = age1;
 
 let drink = window.prompt("what is your drink", "");
 A[3] = drink;
@@ -49,6 +50,12 @@ let prepared = window.alert("Your Drink is being Prepared");
 
 console.log("Name : " +  theName +'\n'  +"Drink : " + drink);
 
-for(x = 0 ;x <= A.length -1; x++){
-    console.log(A[x]);
-}
+function commitData() { 
+    document.getElementById("name").innerHTML=A[0];
+    document.getElementById("genderli").innerHTML = "Gender : " + A[1];
+    document.getElementById("ageli").innerHTML = "Age : " + A[2];
+    document.getElementById("drinkli").innerHTML = "Drink : " + A[3];
+};
+
+
+commitData();
