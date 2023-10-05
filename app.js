@@ -1,61 +1,54 @@
-var theName;
-var gender;
+const hot = document.getElementById("hotdrink");
+const cold = document.getElementById("colddrink");
 
-var male = "MALE";
-var female = "FEMALE";
-
-let A = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
-
-theName = window.prompt("Enter Your Name", "");
-A[0] = theName;
-
-
-gender = window.prompt("Enter Your Gender", "").toUpperCase();
-
-
-function LGender() {
-    while (true) {
-        if (gender !== male && gender !== female) {
-            gender = window.prompt("Enter Your Gender", "").toUpperCase();
-            A[1] = gender;
-        } else {
-            break;
-            
-        }
-    }
-    A[1] = gender;
+function resetForm() {
+    document.getElementById("Name").value = "";
+    document.getElementById("Age").value = "";
+    hot.checked = false;
+    cold.checked = false;
+    document.getElementById("DrinkName").value = "";
+    document.getElementById("disp").innerHTML = "disp";
 }
 
-LGender();
+document.getElementById("hotdrink").addEventListener("click", hotdrink);
+function hotdrink() {
+    cold.checked = false;
+}
 
-if (gender == "MALE"){
-    window.alert("Welcome Mr " + theName);
-} else if (gender == "FEMALE"){
-    window.alert("Welcome Ms "+ theName)
-} else
-    window.alert("Welcome " + theName);
+document.getElementById("colddrink").addEventListener("click", colddrink);
+function colddrink() {
+    hot.checked = false;
+}
 
+function printvalue() {
+    var Name = document.getElementById("Name").value;
+    var Age = document.getElementById("Age").value;
+    var cold1 = document.getElementById("colddrink");
+    var hot1 = document.getElementById("hotdrink");
+    var DrinkName = document.getElementById("DrinkName").value;
+    var A = [];
 
+    if (cold1.checked === true) {
+        A[0] = Name;
+        A[1] = Age;
+        A[2] = "Cold";
+        A[3] = DrinkName;
+        document.getElementById("disp").innerHTML =
+            "Name: " + A[0] + '<br>' +
+            "Age: " + A[1] + '<br>' +
+            "Drink Type: " + A[2] + '<br>' +
+            "Drink Name: " + A[3];
+    }
 
-
-let age1 = window.prompt("How old are you?", "");
-A[2] = age1;
-
-let drink = window.prompt("what is your drink", "");
-A[3] = drink;
-
-
-let prepared = window.alert("Your Drink is being Prepared");
-
-console.log("Name : " +  theName +'\n'  +"Drink : " + drink);
-
-function commitData() { 
-    document.getElementById("name").innerHTML=A[0];
-    document.getElementById("genderli").innerHTML = "Gender : " + A[1];
-    document.getElementById("ageli").innerHTML = "Age : " + A[2];
-    document.getElementById("drinkli").innerHTML = "Drink : " + A[3];
-};
-
-
-commitData();
+    if (hot1.checked === true) {
+        A[0] = Name;
+        A[1] = Age;
+        A[2] = "Hot";
+        A[3] = DrinkName;
+        document.getElementById("disp").innerHTML =
+            "Name: " + A[0] + '<br>' +
+            "Age: " + A[1] + '<br>' +
+            "Drink Type: " + A[2] + '<br>' +
+            "Drink Name: " + A[3];
+    }
+}
