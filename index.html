@@ -9,8 +9,38 @@
 <body>
 
 
-
-
+    <div class="cont">
+        <form>
+            <div>
+                <label for="Name">Username: </label>
+                <input type="text" name="Name" id="Name" placeholder="">
+            </div>
+            <br>
+            <div>
+                <label for="Age">Age: </label>
+                <input type="text" name="Age" id="Age" placeholder="">
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="hotorcold" value="Hot" id="hotdrink">
+                <label for="hotdrink">Hot</label>
+                <br>
+                <input type="checkbox" name="hotorcold" value="Cold" id="colddrink">
+                <label for="colddrink">Cold</label>
+            </div>
+            <br>
+            <div>
+                <label for="DrinkName">Drink: </label>
+                <input type="text" name="DrinkName" id="DrinkName" placeholder="">
+            </div>
+            <br>
+            <button type="button" id="Submit" onclick="printvalue()">Submit</button>
+            <button type="button" id="Reset" onclick="resetForm()">Reset</button>
+        </form>
+    </div>
+    
+    <div><p id="disp"></p></div>
+    
     
 
 
